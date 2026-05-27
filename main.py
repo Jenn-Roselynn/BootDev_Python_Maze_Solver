@@ -4,9 +4,11 @@ from maze import Maze
 def main():
     win = Window(800, 600)
     
-    # Create a 10x12 maze starting at (10, 10)
-    # The grid will be 12 rows tall and 10 columns wide
+    # The Maze constructor already calls create_cells, break_walls, etc.
     maze = Maze(10, 10, 12, 10, 50, 50, win)
+    
+    # Solve it
+    maze.solve()
     
     win.wait_for_close()
 
